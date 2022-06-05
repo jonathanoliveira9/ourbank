@@ -39,3 +39,9 @@ jobs:
       # Add or replace test runners here
       - name: Run tests
         run: bin/rake
+      - name: Upload coverage results
+        uses: actions/upload-artifact@master
+        if: always()
+        with:
+         name: coverage-report
+         path: coverage
