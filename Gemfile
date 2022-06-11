@@ -5,10 +5,11 @@ ruby "3.0.0"
 
 # Devise
 gem 'devise'
+gem 'devise-jwt'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'rack-cors'
 gem "rails", "~> 7.0.3"
-
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
@@ -40,6 +41,8 @@ gem "bootsnap", require: false
 # gem "rack-cors"
 
 group :development, :test do
+  gem 'byebug'
+  gem 'pry-remote'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
